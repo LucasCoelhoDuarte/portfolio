@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lucas Duarte</title>
+    <link rel="icon" href="images/Favicon.png" type="image/png">
+    <link rel="stylesheet/less" type="text/css" href="less/custom.less" />
+    <script src="assets/less/less.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/animate/animate.min.css"/>
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
+    <header id="header-principal" class="animate__animated animate__fadeInDown">
+        <div class="grid">
+            <div class="column-logo">
+                <div class="logo"> 
+                    <img src="images/Logo.png">
+                </div>
+                <h1>@<strong>LUCAS</strong>DUARTE 🚀👨🏻‍💻</h1>
+            </div>
+            <div class="column-menu">
+                <div class="menu">
+                    <span>Menu</span>
+                    <div class="button">
+                        <div class="burguer">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main id="page-home">   
         <section id="secao-capa">
             <div class="grid">
@@ -16,7 +43,7 @@
                         <span class="tag-info">4+ anos de experiência</span>
                         <span class="tag-info">30+ projetos desenvolvidos</span>
                         <a href="#secao-sobre">
-                            <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/11/icon_mouse.png">
+                            <img src="images/icon_mouse.png">
                             <span>CONHEÇA O MEU TRABALHO</span>
                         </a>
                     </div>
@@ -109,7 +136,7 @@
                     <clipPath id="clip1_2_95">
                     <rect width="22" height="22" fill="white" transform="translate(59 446)"/>
                     </clipPath>
-                    <image id="image0_2_95" width="2731" height="4096" href="<?= get_site_url(); ?>/wp-content/uploads/2024/11/Arte-Dev.png"></image>
+                    <image id="image0_2_95" width="2731" height="4096" href="images/Arte-Dev.png"></image>
                     </defs>
                 </svg>
                 </div>
@@ -131,22 +158,22 @@
                     <div class="card-formacao">
                         <div class="cabecalho">
                             <span class="duracao">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-calendar.png">
+                                <img src="images/icon-calendar.png">
                                 2017-2019
                             </span>
                             <span class="tipo-formacao">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-computer.png">
+                                <img src="images/icon-computer.png">
                                 Curso técnico
                             </span>
                         </div>
                         <h3>Técnico em informática</h3>
                         <ul>
                             <li>
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-instituicao.png">
+                                <img src="images/icon-instituicao.png">
                                 CEDUP Abílio Paulo
                             </li>
                             <li>
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-local.png">
+                                <img src="images/icon-local.png">
                                 Criciúma - SC
                             </li>
                         </ul>
@@ -154,22 +181,22 @@
                     <div class="card-formacao">
                         <div class="cabecalho">
                             <span class="duracao">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-calendar.png">
+                                <img src="images/icon-calendar.png">
                                 2020-2023
                             </span>
                             <span class="tipo-formacao">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-computer.png">
+                                <img src="images/icon-computer.png">
                                 Graduação
                             </span>
                         </div>
                         <h3>Bacharel em Sistemas de Informação</h3>
                         <ul>
                             <li>
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-instituicao.png">
+                                <img src="images/icon-instituicao.png">
                                 Faculdades Esucri
                             </li>
                             <li>
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-local.png">
+                                <img src="images/icon-local.png">
                                 Criciúma - SC
                             </li>
                         </ul>
@@ -184,20 +211,20 @@
                     <div class="card-experiencia">
                         <div class="cabecalho">
                             <span class="empresa">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/logo-betha.png">
+                                <img src="images/logo-betha.png">
                                 BETHA SISTEMAS
                             </span>
                             <span class="duracao">
-                                <img src="<?= get_site_url(); ?>/wp-content/uploads/2024/12/icon-calendar-black.png">
+                                <img src="images/icon-calendar-black.png">
                                 DEZEMBRO 2022 - PRESENTE
                             </span>
                         </div>
                         <div class="cargo">
-                            <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-computer.png">
+                            <img src="images/icon-computer-experiencia.png">
                             Desenvolvedor full stack
                         </div>
                         <div class="sobre">
-                            <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-topico.png">
+                            <img src="images/icon-topico.png">
                             <p>Desenvolvedor full stack</p>
                         </div>
                     </div>
@@ -205,10 +232,10 @@
             </div>
         </section>
         <button id="button-return-top" class="animate__animated animate__bounceInUp">
-            <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-arrow-top.png">
+            <img src="images/icon-arrow-top.png">
         </button>
         <a id="whats-link" class="animate__animated animate__bounceInUp" href="#" target="_blank">
-            <img src="<?= get_site_url(); ?>/wp-content/uploads/2025/04/icon-whats.png">
+            <img src="images/icon-whats.png">
         </a>
     </main>
 </body>
