@@ -610,16 +610,10 @@ body{
                                     object-fit: cover;
                                 }
                             }
-                            .tipo-formacao{
-                                background: #FEEFCE;
-                                border-radius: 100px;
-                                color: #0C0C0C;
-                                font-size: 18px;
-                                font-weight: 600;
-                                padding: 6px 21px;
+                            .icon-certificado{
                                 img{
-                                    margin-right: 8px;
-                                    vertical-align: sub;
+                                    display: block;
+                                    width: 55px;
                                 }
                             }
                         }
@@ -628,6 +622,29 @@ body{
                             font-size: 28px;
                             font-weight: 600;
                             margin-bottom: 24px;
+                        }
+                        a.visualizar-certificado{
+                            display: inline-block;
+                            background-color: #CECECE;
+                            border: 1px solid black;
+                            border-radius: 100px;
+                            color: black;
+                            text-decoration: none;
+                            font-size: 19px;
+                            font-weight: 500;
+                            padding: 14px 40px;
+                            line-height: 1em;
+                            cursor: url(../images/cursor-pointer.png), auto;
+                            transition: all 0.3s;
+                            transform-origin: left;
+                            object{
+                                vertical-align: -3px;
+                                margin-right: 10px;
+                            }
+                            &:hover{
+                                background-color: #ababab;
+                                transform: scale(0.95);
+                            }
                         }
                         &:hover{
                             background: #C2C2C2;
