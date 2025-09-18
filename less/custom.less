@@ -45,6 +45,10 @@
     font-family: "Poppins", serif;
 }
 
+html, body{
+    cursor: url(../images/cursor.png), auto;
+}
+
 // Scroll
 
 body::-webkit-scrollbar {
@@ -123,7 +127,7 @@ body{
                         height: 50px;
                         width: 50px;
                         border-radius: 100px;
-                        cursor: pointer;
+                        cursor: url(../images/cursor-pointer.png), auto;
                         transition: all 0.3s;
                         .burguer{
                             width: 27px;
@@ -233,7 +237,7 @@ body{
                         line-height: 1em;
                         display: inline-flex;
                         margin-top: 96px;
-                        cursor: pointer;
+                        cursor: url(../images/cursor-pointer.png), auto;
                         transition: all 0.3s;
                         img{
                             animation: animationMouse 1.5s ease-in-out infinite;
@@ -449,6 +453,9 @@ body{
                     }
                 }
                 .area-experiencias{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 40px;
                     .card-experiencia{
                         background: #E7E7E7;
                         border-radius: 20px;
@@ -476,6 +483,7 @@ body{
                                     border-radius: 100%;
                                     border: 2px solid white;
                                     margin-right: 16px;
+                                    object-fit: cover;
                                 }
                             }
                             .duracao{
@@ -493,6 +501,7 @@ body{
                         }
                         .cargo{
                             display: flex;
+                            margin-bottom: 25px;
                             align-items: center;
                             color: #0C0C0C;
                             font-size: 28px;
@@ -538,6 +547,119 @@ body{
                 }
             }
         }
+        #secao-certificados{
+            padding: 0 20px;
+            margin-bottom: 100px;
+            .grid{
+                max-width: 1292px;
+                margin: 0 auto;
+                > h2{
+                    color: #EFAE02;
+                    font-weight: bold;
+                    font-size: 38px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 40px;
+                    &::before{
+                        content: "Certificados";
+                        -webkit-text-stroke: 1px #EFAE02;
+                        color: transparent;
+                        font-size: 45px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0.15;
+                        pointer-events: none;
+                        line-height: 1.3em;
+                    }
+                }
+                .area-certificados{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 40px;
+                    row-gap: 38px;
+                    .card-certificado{
+                        background: #E7E7E7;
+                        border-radius: 20px;
+                        width: ~"calc(50% - 20px)";
+                        padding: 25px;
+                        position: relative;
+                        overflow: hidden;
+                        transition: all 0.3s;
+                        .cabecalho{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 30px;
+                            .empresa{
+                                background: #0C0C0C;
+                                border-radius: 100px;
+                                color: #EFAE02;
+                                font-size: 18px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                padding: 1px 20px 1px 1px;
+                                img{
+                                    width: 59px;
+                                    height: 59px;
+                                    border-radius: 100%;
+                                    border: 2px solid white;
+                                    margin-right: 16px;
+                                    object-fit: cover;
+                                }
+                            }
+                            .tipo-formacao{
+                                background: #FEEFCE;
+                                border-radius: 100px;
+                                color: #0C0C0C;
+                                font-size: 18px;
+                                font-weight: 600;
+                                padding: 6px 21px;
+                                img{
+                                    margin-right: 8px;
+                                    vertical-align: sub;
+                                }
+                            }
+                        }
+                        h3{
+                            color: #000000;
+                            font-size: 28px;
+                            font-weight: 600;
+                            margin-bottom: 24px;
+                        }
+                        &:hover{
+                            background: #C2C2C2;
+                            .cabecalho{
+                                .tipo-formacao{
+                                    background: white;
+                                }
+                            }
+                            &::before{
+                                content: "";
+                                background: #efae02b5;
+                                filter: blur(65px);
+                                position: absolute;
+                                top: 0; 
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                display: block;
+                                width: 73px;
+                                border-radius: 100%;
+                                pointer-events: none;
+                            }
+                            >*{
+                                z-index: 1;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     #button-return-top{
         display: none;
@@ -546,10 +668,11 @@ body{
         bottom: 14px;
         left: 14px;
         border: none;
-        cursor: pointer;
+        cursor: url(../images/cursor-pointer.png), auto;
         border-radius: 100%;
         padding: 13px;
         transition: all 0.3s;
+        z-index: 99;
         img{
             display: block;
             width: 36px;
@@ -567,6 +690,8 @@ body{
         padding: 13px;
         transition: all 0.3s;
         animation-delay: 0.5s;
+        z-index: 99;
+        cursor: url(../images/cursor-pointer.png), auto;
         img{
             display: block;
         }
