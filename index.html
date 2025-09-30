@@ -10,6 +10,8 @@
     <script src="assets/less/less.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/animate/animate.min.css"/>
     <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
     <script src="js/custom.js"></script>
 </head>
 <body>
@@ -22,12 +24,24 @@
                 <h1>@<strong>LUCAS</strong>DUARTE 🚀👨🏻‍💻</h1>
             </div>
             <div class="column-menu">
-                <div class="menu">
+                <div id="menu-header">
                     <span>Menu</span>
                     <div class="button">
                         <div class="burguer">
                             <span></span><span></span><span></span>
                         </div>
+                    </div>
+                </div>
+                <div class="conteudo-menu">
+                    <div class="area-menu">
+                        <span class="indicador-selecao"></span>
+                        <span class="menu-item ativo" data-id="secao-sobre"><label>Sobre mim</label></span>
+                        <span class="menu-item" data-id="secao-formacao"><label>Formação</label></span>
+                        <span class="menu-item" data-id="secao-experiencias"><label>Experiências</label></span>
+                        <span class="menu-item" data-id="secao-certificados"><label>Certificados</label></span>
+                        <span class="menu-item" data-id="secao-habilidades"><label>Habilidades</label></span>
+                        <span class="menu-item" data-id="secao-projetos"><label>Projetos</label></span>
+                        <span class="menu-item" data-id="secao-redessociais"><label>Redes sociais</label></span>
                     </div>
                 </div>
             </div>
@@ -147,7 +161,10 @@
                 <h2>Sobre mim</h2>
                 <div class="area-texto-sobre">
                     <p>Um profissional dedicado a criar experiências digitais eficientes e agradáveis, sempre focando na boa experiência dos usuários e buscando constantemente a harmonia entre a estética e funcionalidade em cada projeto empreendido.</p>
-                    <p>ssss ssssss</p>
+                    <p>Como um entusiasta por tecnologia e arte, sempre busco unir com excelência duas coisas: design criativo e programação, que juntos, sendo bem executados, acredito que seja a base para qualquer projeto e solução digital bem sucedida.</p>
+                    <p>Atuo na área desde os 14 anos, quando começaria a dar os primeiros passos no mundo da tecnologia da informação, através de um curso de informática integrado ao ensino médio. Onde foi ministrado diversos temas ao longo de 3 anos, desde Java, Delphi, SQL até o funcionamento de uma rede de computador.</p>
+                    <p>E foi exatamente nesse período da minha vida que decidi que me tornaria um desenvolvedor e que atuaria nesse mercado de trabalho, desenvolvendo e criando recursos tecnológicos para diferentes setores da sociedade em geral.</p>
+                    <p>Atualmente, mesmo sendo um desenvolvedor com conhecimentos e experiências sólidas no front end e tendo participado e cooperado com diversos projetos e melhorias, sempre busco a constante evolução, aprendendo novas tecnologias e tendências para cada vez mais, evoluir como profissional e entregar resultados com qualidade e eficiência, dando aquela vantagem competitiva e diferenciada na condução dos negócios de cada cliente.</p>
                 </div>
             </div>
         </section>
@@ -310,6 +327,125 @@
                 </div>
             </div>
         </section>
+        <section id="secao-habilidades">
+            <div class="grid">
+                <h2>Habilidades</h2>
+                <div class="area-habilidades">
+                    <div class="tag-habilidade">
+                        <img src="images/logo-html.png">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-css.png">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-javascript.png">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-jquery.png">
+                        <span>JQuery</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-less.png">
+                        <span>Less</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-bootstrap.png">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-php.png">
+                        <span>PHP</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-mysql.png">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-wordpress.png">
+                        <span>WordPress</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-angular.png">
+                        <span>Angular</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-figma.png">
+                        <span>Figma</span>
+                    </div>
+                    <div class="tag-habilidade">
+                        <img src="images/logo-git.png">
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="secao-projetos">
+            <div class="grid">
+                <h2>Projetos</h2>
+                <div class="area-projetos">
+                    <button class="button-carrossel button-anterior">
+                        <img src="images/arrow-carrossel.png">
+                    </button>
+                    <button class="button-carrossel button-proximo">
+                        <img src="images/arrow-carrossel.png">
+                    </button>
+                    <div class="carrossel-projetos">
+                        <div class="card-projeto" style="background-color: #4B8C7C;">
+                            <div class="capa-card" style="background-color: #61A9A0;">
+                                <img src="images/capa-construtorabs.png">
+                            </div>
+                            <h3>Construtora BS</h3>
+                        </div>
+                        <div class="card-projeto" style="background-color: #0248B4;">
+                            <div class="capa-card" style="background-color: #0768FE;">
+                                <img src="images/capa-transaltransporte.png">
+                            </div>
+                            <h3>Transal Transportes</h3>
+                        </div>
+                        <div class="card-projeto" style="background-color: #008752;">
+                            <div class="capa-card" style="background-color: #00A75A;">
+                                <img src="images/capa-unimedtubarao.png">
+                            </div>
+                            <h3>Unimed Tubarão</h3>
+                        </div>
+                        <div class="card-projeto" style="background-color: #59081E;">
+                            <div class="capa-card" style="background-color: #921134;">
+                                <img src="images/capa-blumemotel.png">
+                            </div>
+                            <h3>Blume Motel</h3>
+                        </div>
+                        <div class="card-projeto" style="background-color: #0E304A;">
+                            <div class="capa-card" style="background-color: #174D78;">
+                                <img src="images/capa-cssistemas.png">
+                            </div>
+                            <h3>CS Sistemas</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="secao-redessociais">
+            <div class="grid">
+                <h2>Redes sociais</h2>
+                <div class="area-redessociais">
+                    <a href="#" target="_blank" class="tag-redesocial">
+                        <img src="images/logo-linkedin.png">
+                        <span style="color: #007EBB;">LinkedIn</span>
+                    </a>
+                    <a href="#" target="_blank" class="tag-redesocial">
+                        <img src="images/logo-instagram.png">
+                        <span style="color: #D12D90;">Instagram</span>
+                    </a>
+                    <a href="#" target="_blank" class="tag-redesocial">
+                        <img src="images/logo-gmail.png">
+                        <span style="color: #C5221F;">Gmail</span>
+                    </a>
+                </div>
+            </div>
+        </section>
         <button id="button-return-top" class="animate__animated animate__bounceInUp">
             <img src="images/icon-arrow-top.png">
         </button>
@@ -317,5 +453,8 @@
             <img src="images/icon-whats.png">
         </a>
     </main>
+    <footer id="footer-principal">
+        <span>Desenhado e desenvolvido por <strong>Lucas Duarte</strong></span>
+    </footer>
 </body>
 </html>

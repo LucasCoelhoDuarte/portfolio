@@ -1,3 +1,5 @@
+// Fontes
+
 @font-face {
     font-family: Poppins;
     src: url(../assets/fonts/Poppins/Poppins-Black.ttf);
@@ -38,6 +40,8 @@
     src: url(../assets/fonts/IBMPlexSan/IBMPlexSans-Bold.ttf);
 }
 
+// Configurações gerais
+
 *{
     margin: 0;
     padding: 0;
@@ -47,6 +51,29 @@
 
 html, body{
     cursor: url(../images/cursor.png), auto;
+    overflow-x: hidden;
+}
+
+// Fundo ao selecionar textos
+
+::selection {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    background-color: transparent;
+}
+
+::-o-selection {
+    background-color: transparent;
+}
+
+::-ms-selection {
+    background-color: transparent;
+}
+
+::-webkit-selection {
+    background-color: transparent;
 }
 
 // Scroll
@@ -62,12 +89,12 @@ body::-webkit-scrollbar-thumb {
     background: #EFAE02;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// Página
 
 body{
-    background: #0C0C0C;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.719) 35%, rgba(0,0,0,0) 100%), url('../images/capa-fundo.png') center/cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     #header-principal{
         width: 100%;
         padding: 0 20px;
@@ -76,6 +103,7 @@ body{
         z-index: 999;
         transition: all 0.3s;
         .grid{
+            position: relative;
             display: flex;
             justify-content: space-between;
             max-width: 1292px;
@@ -109,7 +137,7 @@ body{
                 }
             }
             .column-menu{
-                .menu{
+                #menu-header{
                     background: #0C0C0C;
                     border-radius: 100px;
                     display: flex;
@@ -156,6 +184,84 @@ body{
                         }
                     }
                 }
+                .conteudo-menu{
+                    position: absolute;
+                    pointer-events: none;
+                    opacity: 0;
+                    height: 0;
+                    width: 100%;
+                    bottom: 0;
+                    padding: 8px;
+                    right: 0;
+                    background-color: #252424;
+                    border: 1px solid #C9C9C9;
+                    border-radius: 100px;
+                    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.14);
+                    transition: all 0.3s;
+                    &::before{
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background-color: #252424;
+                        border: 1px solid #C9C9C9;
+                        position: absolute;
+                        top: -5px;
+                        right: 67px;
+                        transform: rotate(135deg);
+                        pointer-events: none;
+                    }
+                    &::after{
+                        content: "";
+                        width: 32px;
+                        height: 32px;
+                        background-color: #252424;
+                        position: absolute;
+                        top: 0;
+                        right: 62px;
+                        pointer-events: none;
+                    }
+                    .area-menu{
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        .indicador-selecao{
+                            position: absolute;
+                            background-color: #c59102;
+                            height: 100%;
+                            width: calc(100% / 7);
+                            border-radius: 100px;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            transition: all 0.3s;
+                        }
+                        span{
+                            text-align: center;
+                            flex: 1;
+                            z-index: 2;
+                            label{
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 500;
+                                cursor: url(../images/cursor.png), auto;
+                                transition: all 0.3s;
+                                pointer-events: none;
+                            }
+                            &:not(.ativo){
+                                label{
+                                    pointer-events: all;
+                                    &:hover{
+                                        color: #EFAE02;
+                                        cursor: url(../images/cursor-pointer.png), auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         &::before{
@@ -182,6 +288,18 @@ body{
             }
             .grid{
                 box-shadow: none;
+            }
+        }
+        &.open-menu{
+            .grid{
+                .column-menu{
+                    .conteudo-menu{
+                        pointer-events: all;
+                        opacity: 1;
+                        height: 58px;
+                        bottom: -73px;
+                    }
+                }
             }
         }
     }
@@ -677,6 +795,216 @@ body{
                 }
             }
         }
+        #secao-habilidades{
+            padding: 0 20px;
+            margin-bottom: 100px;
+            .grid{
+                max-width: 1292px;
+                margin: 0 auto;
+                > h2{
+                    color: #EFAE02;
+                    font-weight: bold;
+                    font-size: 38px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 40px;
+                    &::before{
+                        content: "Habilidades";
+                        -webkit-text-stroke: 1px #EFAE02;
+                        color: transparent;
+                        font-size: 45px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0.15;
+                        pointer-events: none;
+                        line-height: 1.3em;
+                    }
+                }
+                .area-habilidades{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 30px;
+                    row-gap: 37px;
+                    .tag-habilidade{
+                        background-color: #E7E7E7;
+                        font-size: 28px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 25px;
+                        border-radius: 100px;
+                        height: 82px;
+                        transition: all 0.3s;
+                        span{
+                            margin-left: 22px;
+                        }
+                        &:hover{
+                            background-color: #EFAE02;
+                            transform: translateY(-8px);
+                        }
+                    }
+                }
+            }
+        }
+        #secao-projetos{
+            padding: 0 20px;
+            margin-bottom: 100px;
+            .grid{
+                > h2{
+                    color: #EFAE02;
+                    font-weight: bold;
+                    font-size: 38px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 40px;
+                    &::before{
+                        content: "Projetos";
+                        -webkit-text-stroke: 1px #EFAE02;
+                        color: transparent;
+                        font-size: 45px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0.15;
+                        pointer-events: none;
+                        line-height: 1.3em;
+                    }
+                }
+                .area-projetos{
+                    position: relative;
+                    .button-carrossel{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        z-index: 1;
+                        background-color: #EFAE02;
+                        border: none;
+                        width: 56px;
+                        height: 106%;
+                        cursor: url(../images/cursor-pointer.png), auto;
+                        box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 14%);
+                        transition: all 0.3s;
+                        &.button-anterior{
+                            left: -20px;
+                            border-radius: 0 20px 20px 0;
+                            img{
+                                margin-right: 5px;
+                            }
+                        }
+                        &.button-proximo{
+                            right: -20px;
+                            border-radius: 20px 0 0 20px;
+                            img{
+                                margin-left: 5px;
+                                transform: scaleX(-1);
+                            }
+                        }
+                        &:hover{
+                            background-color: #FFC300;
+                        }
+                    }
+                    .carrossel-projetos{
+                        max-width: 1292px;
+                        margin: 0 auto;
+                        .slick-list{
+                            overflow: visible;
+                            .card-projeto{
+                                border-radius: 50px;
+                                text-align: center;
+                                padding: 15px 15px 30px;
+                                margin: 0 18px;
+                                .capa-card{
+                                    border-radius: 35px;
+                                    overflow: hidden;
+                                    margin-bottom: 28px;
+                                    img{
+                                        margin: 0 auto;
+                                    }
+                                }
+                                h3{
+                                    font-weight: 600;
+                                    font-size: 28px;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #secao-redessociais{
+            padding: 0 20px;
+            margin-bottom: 100px;
+            .grid{
+                max-width: 1292px;
+                margin: 0 auto;
+                > h2{
+                    color: #EFAE02;
+                    font-weight: bold;
+                    font-size: 38px;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 40px;
+                    &::before{
+                        content: "Redes sociais";
+                        -webkit-text-stroke: 1px #EFAE02;
+                        color: transparent;
+                        font-size: 45px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0.15;
+                        pointer-events: none;
+                        line-height: 1.3em;
+                    }
+                }
+                .area-redessociais{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 30px;
+                    row-gap: 37px;
+                    .tag-redesocial{
+                        background-color: #E7E7E7;
+                        font-size: 28px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 43px;
+                        border-radius: 100px;
+                        height: 100px;
+                        transition: all 0.3s;
+                        cursor: url(../images/cursor-pointer.png), auto;
+                        span{
+                            margin-left: 22px;
+                        }
+                        &:hover{
+                            background-color: #EFAE02;
+                            transform: translateY(-8px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer-principal{
+        background-color: #EFAE02;
+        padding: 23px 20px;
+        span{
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            strong{
+                font-weight: 600;
+            }
+        }
     }
     #button-return-top{
         display: none;
@@ -690,6 +1018,7 @@ body{
         padding: 13px;
         transition: all 0.3s;
         z-index: 99;
+        box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 14%);
         img{
             display: block;
             width: 36px;
@@ -709,6 +1038,7 @@ body{
         animation-delay: 0.5s;
         z-index: 99;
         cursor: url(../images/cursor-pointer.png), auto;
+        box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 14%);
         img{
             display: block;
         }
@@ -717,6 +1047,8 @@ body{
         }
     }
 }
+
+// Animações
 
 @keyframes animationMouse {
     0% {
